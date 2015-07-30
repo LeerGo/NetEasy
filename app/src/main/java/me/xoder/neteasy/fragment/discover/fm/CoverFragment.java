@@ -10,12 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import me.xoder.neteasy.R;
+import me.xoder.neteasy.view.RoundImageView;
 
 /**
  * Created by alex.lee on 2015-07-30.
  */
+// TODO: 2015-07-30 图片镜像处理
 public class CoverFragment extends Fragment {
 	private Context context;
+
+	private RoundImageView ivCover;
 
 	@Override
 	public void onAttach(Activity activity) {
@@ -37,6 +41,6 @@ public class CoverFragment extends Fragment {
 	 * @param view 父视图
 	 */
 	private void initViews(View view) {
-
+		ivCover = (RoundImageView) view.findViewById(R.id.iv_fm_cover);
 	}
 }

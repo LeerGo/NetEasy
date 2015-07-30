@@ -127,7 +127,6 @@ public class RoundImageView extends ImageView {
 
 	@Override
 	protected void onDraw(Canvas canvas) {
-		Log.e("TAG", "onDraw");
 		if (getDrawable() == null) {
 			return;
 		}

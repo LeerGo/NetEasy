@@ -14,7 +14,7 @@ import android.widget.FrameLayout;
 
 import me.xoder.neteasy.R;
 import me.xoder.neteasy.fragment.discover.fm.CoverFragment;
-import me.xoder.neteasy.utils.ToastUtils;
+import me.xoder.neteasy.fragment.discover.fm.LyricFragment;
 
 /**
  * Created by alex.lee on 2015-07-29.
@@ -24,6 +24,8 @@ public class PersonalFMActivity extends FragmentActivity {
 
 	private Fragment fgTo;
 	private Fragment fgCover;
+	private Fragment fgLyric;
+	private boolean fgFlag = false;
 
 	private FrameLayout frameContainer;
 
@@ -54,7 +56,18 @@ public class PersonalFMActivity extends FragmentActivity {
 		frameContainer.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				ToastUtils.show(PersonalFMActivity.this, "切换界面");
+				if (fgFlag) {
+					if (fgCover == null) {
+						fgCover = new CoverFragment();
+					}
+					switchFragment(fgTo, fgCover);
+				} else {
+					if (fgLyric == null) {
+						fgLyric = new LyricFragment();
+					}
+					switchFragment(fgTo, fgLyric);
+				}
+				fgFlag = !fgFlag;
 			}
 		});
 	}
@@ -62,7 +75,6 @@ public class PersonalFMActivity extends FragmentActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.menu_personal_fm, menu);
-
 		return true;
 	}
 
@@ -79,22 +91,17 @@ public class PersonalFMActivity extends FragmentActivity {
 		return true;
 	}
 
-	public void switchFragment(Fragment from, Fragment to, boolean animFlag) {
+	public void switchFragment(Fragment from, Fragment to) {
 		if (from == null || to == null || from == to) {
 			return;
 		}
 
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-		if (animFlag) {
-			transaction.setCustomAnimations(R.anim.push_left_in, R.anim.push_left_out);
-		} else {
-			transaction.setCustomAnimations(R.anim.push_right_in, R.anim.push_right_out);
-		}
+		transaction.setCustomAnimations(R.anim.abc_fade_in, R.anim.abc_fade_out);
 
 		if (!to.isAdded()) {
 			// 隐藏当前的fragment，add下一个到Activity中
-			transaction.hide(from).add(R.id.frame_container, to).commit();
+			transaction.hide(from).add(R.id.frame_fm_container, to).commit();
 		} else {
 			// 隐藏当前的fragment，显示下一个
 			transaction.hide(from).show(to).commit();
