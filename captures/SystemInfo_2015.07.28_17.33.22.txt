@@ -1,3 +1,0 @@
-TASK me.xoder.neteasy id=1390
-  ACTIVITY me.xoder.neteasy/.activity.MainActivity 162cef50 pid=14349
-    Failure while dumping the activity: java.io.IOException: Timeout
