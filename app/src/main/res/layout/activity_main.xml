@@ -1,0 +1,78 @@
+<android.support.v4.widget.DrawerLayout
+	android:id="@+id/slide_menu"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<android.support.v4.view.ViewPager
+		android:id="@+id/view_pager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+	<RelativeLayout
+		android:id="@+id/content_frame"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="3dp"
+			android:layout_above="@+id/ll_music_control"
+			android:background="@drawable/shadow_ll_music_cotrol"/>
+
+		<LinearLayout
+			android:id="@+id/ll_music_control"
+			android:layout_width="match_parent"
+			android:layout_height="45dp"
+			android:layout_alignParentBottom="true"
+			android:background="#eeffffff"
+			android:orientation="horizontal">
+
+			<ImageView
+				android:layout_width="45dp"
+				android:layout_height="match_parent"
+				android:scaleType="fitXY"
+				android:src="@drawable/bottom_music_singer"/>
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:paddingLeft="10dp">
+
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="0dp"
+					android:layout_weight="60"
+					android:gravity="center_vertical"
+					android:text="古域之域"
+					android:textSize="15sp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="0dp"
+					android:layout_weight="40"
+					android:gravity="top"
+					android:text="赵时"
+					android:textColor="#BABABA"
+					android:textSize="10sp"/>
+			</LinearLayout>
+
+			<ImageView
+				android:layout_width="45dp"
+				android:layout_height="match_parent"
+				android:scaleType="fitCenter"
+				android:src="@drawable/playbar_btn_play"/>
+
+			<ImageView
+				android:layout_width="45dp"
+				android:layout_height="match_parent"
+				android:scaleType="fitCenter"
+				android:src="@drawable/playbar_btn_next"/>
+		</LinearLayout>
+	</RelativeLayout>
+
+	<include layout="@layout/slide_menu_content"/>
+</android.support.v4.widget.DrawerLayout>

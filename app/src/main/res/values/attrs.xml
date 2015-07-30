@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="ImgTextView">
+		<attr name="tips" format="string|reference"/>
+		<attr name="back" format="string"/>
+		<attr name="src" format="reference"/>
+	</declare-styleable>
+
+	<declare-styleable name="RoundImageView">
+		<attr name="border_radius" format="dimension"/>
+		<attr name="type">
+			<enum name="circle" value="0"/>
+			<enum name="round" value="1"/>
+		</attr>
+	</declare-styleable>
+</resources>

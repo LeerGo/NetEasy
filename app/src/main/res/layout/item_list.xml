@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/selector_def_click">
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_alignParentTop="true"
+		android:background="#D2D2D2"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="10dp"
+		android:layout_marginTop="10dp">
+
+		<me.xoder.neteasy.view.RoundImageView
+			android:id="@+id/iv_cover"
+			android:layout_width="60dp"
+			android:layout_height="60dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:scaleType="centerCrop"
+			app:border_radius="2dp"
+			app:type="round"/>
+
+		<me.xoder.neteasy.view.CalendarView
+			android:id="@+id/cv_calendar"
+			android:layout_width="60dp"
+			android:layout_height="60dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:visibility="invisible"/>
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/iv_cover"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/tv_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="16sp"/>
+
+			<TextView
+				android:id="@+id/tv_desc"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:textColor="#828282"
+				android:textSize="10sp"/>
+		</LinearLayout>
+
+		<ImageView
+			android:id="@+id/iv_right_arr"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="10dp"
+			android:src="@drawable/list_icn_arr_right"/>
+	</RelativeLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_alignParentBottom="true"
+		android:background="#D2D2D2"/>
+</RelativeLayout>

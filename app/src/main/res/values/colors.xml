@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="white">#ffffff</color>
+	<color name="light_gray">#f0f0f0</color>
+	<color name="transparent">#00000000</color>
+	<color name="base_color">#DC1E00</color>
+	<color name="actionbar_selected">#C51E00</color>
+	<color name="actionbar_background">@color/base_color</color>
+	<color name="black">#ff000000</color>
+</resources>

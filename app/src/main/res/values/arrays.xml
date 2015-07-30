@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="actionbar_icons">
+		<item>@drawable/actionbar_discover</item>
+		<item>@drawable/actionbar_music</item>
+		<item>@drawable/actionbar_friends</item>
+	</string-array>
+</resources>

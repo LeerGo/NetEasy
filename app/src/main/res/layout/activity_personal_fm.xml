@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="80"/>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="20"
+		android:background="#FCFFDE"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="00:00"
+					android:textColor="#A7A7A7"
+					android:textSize="8sp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:text="05:04"
+					android:textColor="#A7A7A7"
+					android:textSize="8sp"/>
+			</RelativeLayout>
+
+			<SeekBar
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:max="100"
+				android:maxHeight="0.8dp"
+				android:paddingLeft="0dp"
+				android:paddingRight="0dp"
+				android:progress="15"
+				android:progressDrawable="@drawable/progress_bar_bg"
+				android:secondaryProgress="35"
+				android:thumb="@drawable/mv_playbar_btn"/>
+		</RelativeLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:orientation="horizontal">
+
+			<ImageView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:src="@drawable/rdi_btn_play"/>
+
+			<ImageView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:src="@drawable/rdi_btn_love"/>
+
+			<ImageView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:src="@drawable/rdi_btn_del"/>
+
+			<ImageView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:src="@drawable/rdi_btn_next"/>
+
+		</LinearLayout>
+	</FrameLayout>
+</LinearLayout>

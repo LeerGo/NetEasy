@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbars="none">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<android.support.v4.view.ViewPager
+				android:id="@+id/banner_viewpager"
+				android:layout_width="match_parent"
+				android:layout_height="150dp"
+				android:background="@color/light_gray"/>
+
+			<LinearLayout
+				android:id="@+id/banner_viewpager_points"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_centerHorizontal="true"
+				android:orientation="horizontal"/>
+		</RelativeLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:paddingBottom="15dp"
+			android:paddingLeft="10dp"
+			android:paddingTop="15dp">
+
+			<View
+				android:layout_width="2dp"
+				android:layout_height="18dp"
+				android:layout_gravity="center"
+				android:layout_marginRight="8dp"
+				android:background="@drawable/vertical_line_red"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="热门推荐"
+				android:textSize="18sp"/>
+		</LinearLayout>
+
+		<me.xoder.neteasy.view.ScrollGridView
+			android:id="@+id/my_grid"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:horizontalSpacing="10dp"
+			android:numColumns="3"
+			android:verticalSpacing="20dp"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+			android:orientation="horizontal"
+			android:paddingBottom="15dp"
+			android:paddingLeft="10dp"
+			android:paddingTop="15dp">
+
+			<View
+				android:layout_width="2dp"
+				android:layout_height="18dp"
+				android:layout_gravity="center"
+				android:layout_marginRight="8dp"
+				android:background="@drawable/vertical_line_red"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="5dp"
+				android:text="个性化推荐"
+				android:textSize="18sp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="7月27日更新"
+				android:textColor="#A9A9A9"
+				android:textSize="12sp"/>
+		</LinearLayout>
+
+		<me.xoder.neteasy.view.ScrollListView
+			android:id="@+id/lv_advise"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="10dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:divider="@null"
+			android:scrollbars="none"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:paddingBottom="15dp"
+			android:paddingLeft="10dp"
+			android:paddingTop="15dp">
+
+			<View
+				android:layout_width="2dp"
+				android:layout_height="18dp"
+				android:layout_gravity="center"
+				android:layout_marginRight="8dp"
+				android:background="@drawable/vertical_line_red"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="最新音乐"
+				android:textSize="18sp"/>
+		</LinearLayout>
+
+		<me.xoder.neteasy.view.ScrollListView
+			android:id="@+id/lv_newest_music"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="50dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:cacheColorHint="@color/transparent"
+			android:divider="@null"
+			android:scrollbars="none"/>
+	</LinearLayout>
+</ScrollView>

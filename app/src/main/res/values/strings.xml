@@ -1,0 +1,23 @@
+<resources>
+	<string name="app_name">NetEasy</string>
+
+	<string name="hello_world">Hello world!</string>
+	<string name="action_settings">Settings</string>
+	<string name="slide_menu_sign">签到</string>
+	<string name="action_search">搜索</string>
+	<string name="action_more">更多</string>
+	<string name="slide_menu_mymsg">我的消息</string>
+	<string name="slide_menu_lv">我的等级</string>
+	<string name="slide_menu_pay_music">付费音乐包</string>
+	<string name="slide_menu_integral_mall">积分商城</string>
+	<string name="slide_menu_mycloud">我的音乐云盘</string>
+	<string name="slide_menu_recognize">听歌识曲</string>
+	<string name="slide_menu_stop_time">定时停止播放</string>
+	<string name="slide_menu_setting">设置</string>
+	<string name="slide_menu_exit">退出应用</string>
+	<string name="banner_advise">推荐</string>
+	<string name="banner_song_list">歌单</string>
+	<string name="banner_anchor_station">主播电台</string>
+	<string name="banner_ranking_list">排行榜</string>
+	<string name="action_fm">查看歌曲更多信息</string>
+</resources>

@@ -1,0 +1,83 @@
+<resources>
+
+	<style name="AppTheme" parent="android:Theme.Holo.Light">
+		<item name="android:actionBarStyle">@style/EmbeddedActionBar</item>
+		<item name="android:actionBarTabStyle">@style/EmbeddedTabStyle</item>
+		<item name="android:actionBarTabBarStyle">@style/EmbeddedTabBarStyle</item>
+	</style>
+
+	<style name="EmbeddedActionBar" parent="NormalActionBar"/>
+
+	<style name="EmbeddedTabStyle" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+		<item name="android:padding">0dp</item>
+		<item name="android:gravity">center</item>
+		<item name="android:background">@drawable/actionbar_tabs_bg</item>
+	</style>
+
+	<style name="EmbeddedTabBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.TabBar">
+		<item name="android:divider">@null</item>
+	</style>
+
+	<style name="ActionBarTheme" parent="android:Theme.Holo.Light">
+		<item name="android:actionBarStyle">@style/NormalActionBar</item>
+	</style>
+
+	<style name="NormalActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+		<item name="android:displayOptions">none</item>
+		<item name="android:title">私人FM</item>
+		<item name="android:titleTextStyle">@style/action_bar_style</item>
+		<item name="android:background">@color/actionbar_background</item>
+	</style>
+
+	<style name="action_bar_style">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/text_large</item>
+	</style>
+
+	<style name="slide_menu_line">
+		<item name="android:layout_marginRight">15dp</item>
+		<item name="android:layout_marginLeft">5dp</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">1px</item>
+		<item name="android:background">#C3C3C3</item>
+	</style>
+
+	<style name="slide_menu_sec_rl">
+		<item name="android:background">@drawable/slide_menu_rl</item>
+		<item name="android:clickable">true</item>
+		<item name="android:focusable">true</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">0dp</item>
+		<item name="android:layout_weight">1</item>
+	</style>
+
+	<style name="slide_menu_arr">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_alignParentRight">true</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:layout_marginRight">15dp</item>
+		<item name="android:src">@drawable/topmenu_icn_arr</item>
+	</style>
+
+	<style name="slide_menu_icn">
+		<item name="android:layout_marginLeft">10dp</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_centerVertical">true</item>
+	</style>
+
+	<style name="slide_menu_text">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:layout_marginLeft">10dp</item>
+		<item name="android:textSize">@dimen/text_middle</item>
+	</style>
+
+	<style name="slide_menu_ll">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">0dp</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+</resources>
