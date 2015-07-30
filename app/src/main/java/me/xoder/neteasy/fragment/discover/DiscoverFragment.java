@@ -72,7 +72,6 @@ public class DiscoverFragment extends Fragment implements View.OnClickListener {
 	public void onClick(View v) {
 		allNegative();
 		int vid = v.getId();
-		FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
 
 		switch (vid) {
 			case R.id.ctv_advise:
@@ -106,7 +105,6 @@ public class DiscoverFragment extends Fragment implements View.OnClickListener {
 		}
 
 		lastViewId = vid;
-//		transaction.commit();
 	}
 
 	private void allNegative() {
