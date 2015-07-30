@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="45dp"
+		android:orientation="horizontal">
+
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="10">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:src="@drawable/play_rdi_icn_speaker"/>
+		</RelativeLayout>
+
+		<SeekBar
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="90"
+			android:max="100"
+			android:maxHeight="2dp"
+			android:minHeight="1dp"
+			android:progress="15"
+			android:progressDrawable="@drawable/progress_bar_bg"
+			android:secondaryProgress="35"
+			android:thumb="@drawable/mv_playbar_btn"/>
+	</LinearLayout>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:clickable="false"
+			android:focusable="false">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:layout_width="0dp"
+					android:layout_height="15dp"
+					android:layout_weight="1"
+					android:scaleType="fitCenter"
+					android:src="@drawable/btn_icn_play"/>
+
+				<View
+					android:layout_width="0dp"
+					android:layout_height="1px"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="8"
+					android:background="#b7b7b7"/>
+
+				<TextView
+					android:layout_width="0dp"
+					android:gravity="center"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="1"
+					android:text="00:37"
+					android:textColor="#989898"
+					android:textSize="12sp"/>
+			</LinearLayout>
+		</RelativeLayout>
+	</FrameLayout>
+</FrameLayout>
