@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-	<item
-		android:id="@android:id/background"
-		android:drawable="@drawable/mv_playbar_bg"/>
-	<item
-		android:id="@android:id/secondaryProgress"
-		android:drawable="@drawable/mv_playbar_ready"/>
-	<item
-		android:id="@android:id/progress"
-		android:drawable="@drawable/mv_playbar_curr"/>
+<layer-list
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@android:id/background">
+		<shape>
+			<solid android:color="#ffdbdbdb"/>
+		</shape>
+	</item>
+	<item android:id="@android:id/secondaryProgress">
+		<clip>
+			<shape>
+				<solid android:color="#ffa7a7a7"/>
+			</shape>
+		</clip>
+	</item>
+	<item android:id="@android:id/progress">
+		<clip>
+			<shape>
+				<solid android:color="#ffCD1C00"/>
+			</shape>
+		</clip>
+	</item>
 </layer-list>
