@@ -28,7 +28,6 @@ import me.xoder.neteasy.adapter.AdviseNewestAdapter;
 import me.xoder.neteasy.adapter.AdvisePagerAdapter;
 import me.xoder.neteasy.scroller.ViewPagerScroller;
 import me.xoder.neteasy.utils.DensityUtils;
-import me.xoder.neteasy.utils.ToastUtils;
 import me.xoder.neteasy.view.ImgTextView;
 import me.xoder.neteasy.view.ScrollGridView;
 import me.xoder.neteasy.view.ScrollListView;
