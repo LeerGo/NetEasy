@@ -9,6 +9,8 @@ import android.widget.GridView;
  * Created by alex.lee on 2015-07-26.
  */
 public class ScrollGridView extends GridView {
+	private boolean moveFlag = false;
+
 	public ScrollGridView(Context context) {
 		super(context);
 	}
@@ -36,5 +38,9 @@ public class ScrollGridView extends GridView {
 		}
 
 		return super.dispatchTouchEvent(ev);
+	}
+
+	public void setMoveFlag(boolean moveFlag) {
+		this.moveFlag = moveFlag;
 	}
 }

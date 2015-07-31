@@ -141,6 +141,7 @@ public class AdviseFragment extends Fragment {
 		scroller.initViewPagerScroll(mViewPager);
 		mHandler.sendEmptyMessageDelayed(0, delay);
 
+		mScrollGridView.setMoveFlag(false);
 		mScrollGridView.setAdapter(new AdviseGridAdapter(context));
 		mPersonalListView.setAdapter(new AdviseFMAdapter(context));
 		mNewestListView.setAdapter(new AdviseNewestAdapter(context));

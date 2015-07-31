@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 import me.xoder.neteasy.R;
+import me.xoder.neteasy.utils.NumberUtil;
 import me.xoder.neteasy.view.RoundImageView;
 import me.xoder.neteasy.widget.AwesomeTextHandler;
 import me.xoder.neteasy.widget.MentionSpanRenderer;
@@ -66,7 +67,7 @@ public class AdviseGridAdapter extends BaseAdapter {
 		}
 
 		holder.rivCover.setImageResource(ids[position]);
-		holder.tvCount.setText(getCount(random.nextInt(250000)));
+		holder.tvCount.setText(NumberUtil.getCount(random.nextInt(250000)));
 		if (position == 3 || position == 5) {
 			holder.tvDesc.setText("@电台节目 测试数据测试数据测试数据");
 			AwesomeTextHandler awesomeEditTextHandler = new AwesomeTextHandler();
@@ -82,13 +83,5 @@ public class AdviseGridAdapter extends BaseAdapter {
 		RoundImageView rivCover;
 		TextView tvCount;
 		TextView tvDesc;
-	}
-
-	private String getCount(int count) {
-		if (count < 100000) {
-			return count + "";
-		} else {
-			return count / 10000 + "万";
-		}
 	}
 }
