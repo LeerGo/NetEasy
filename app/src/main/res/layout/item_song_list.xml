@@ -1,7 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
 
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<me.xoder.neteasy.view.RoundImageView
+			android:id="@+id/riv_cover"
+			android:layout_width="match_parent"
+			android:layout_height="170dp"
+			android:layout_centerInParent="true"
+			android:clickable="true"
+			android:focusable="true"
+			android:scaleType="fitCenter"
+			android:src="@drawable/hot_advise_1"
+			app:border_radius="2dp"
+			app:type="round"/>
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="170dp"
+			android:scaleType="fitXY"
+			android:src="@drawable/index_list_cover"/>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="170dp">
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="22dp"
+				android:layout_alignParentTop="true"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:layout_width="12dp"
+					android:layout_height="12dp"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp"
+					android:layout_toLeftOf="@+id/tv_count"
+					android:src="@drawable/discover_icn_earphone"/>
+
+				<TextView
+					android:id="@+id/tv_count"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="10dp"
+					android:text="95443"
+					android:textColor="@color/white"
+					android:textSize="12sp"/>
+			</RelativeLayout>
+		</RelativeLayout>
+	</FrameLayout>
+
+	<TextView
+		android:id="@+id/tv_desc"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_marginTop="10dp"
+		android:ellipsize="end"
+		android:gravity="center_vertical"
+		android:lines="2"
+		android:text="测试数据测试数据测试数据测试数据"
+		android:textSize="14sp"/>
 </LinearLayout>
