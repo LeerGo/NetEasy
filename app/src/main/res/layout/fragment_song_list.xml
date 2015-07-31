@@ -1,10 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:scrollbars="none">
 
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#F4F4F4"
+		android:orientation="vertical">
 
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="45dp"
+			android:layout_marginBottom="15dp"
+			android:layout_marginTop="15dp"
+			android:paddingLeft="10dp">
+
+			<View
+				android:id="@+id/v_ling_vertical"
+				android:layout_width="2dp"
+				android:layout_height="18dp"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="8dp"
+				android:background="@drawable/vertical_line_red"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_toRightOf="@+id/v_ling_vertical"
+				android:text="全部歌单"
+				android:textSize="18sp"/>
+
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="25dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/chioce_back"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center"
+				android:text="选择分类"
+				android:textColor="#3386C7"
+				android:textSize="12sp"/>
+		</RelativeLayout>
+
+		<me.xoder.neteasy.view.ScrollGridView
+			android:id="@+id/sgv_song_list"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:numColumns="2"/>
+	</LinearLayout>
 </ScrollView>
