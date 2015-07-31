@@ -43,6 +43,14 @@
 		<RelativeLayout
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
+			android:layout_marginTop="45dp">
+
+		</RelativeLayout>
+
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
 			android:clickable="false"
 			android:focusable="false">
 
@@ -68,10 +76,10 @@
 
 				<TextView
 					android:layout_width="0dp"
-					android:gravity="center"
 					android:layout_height="wrap_content"
 					android:layout_gravity="center_vertical"
 					android:layout_weight="1"
+					android:gravity="center"
 					android:text="00:37"
 					android:textColor="#989898"
 					android:textSize="12sp"/>
