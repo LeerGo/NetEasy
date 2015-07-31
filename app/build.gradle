@@ -29,4 +29,5 @@ dependencies {
 	compile 'com.android.support:support-v13:+'
 	compile 'com.android.support:appcompat-v7:22.2.1'
 	compile 'de.hdodenhof:circleimageview:1.3.0'
+	compile files('libs/xUtils-2.6.14.jar')
 }

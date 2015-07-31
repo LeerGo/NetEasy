@@ -9,13 +9,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.lidroid.xutils.BitmapUtils;
+
 import me.xoder.neteasy.R;
+import me.xoder.neteasy.utils.BitmapHelper;
+import me.xoder.neteasy.view.ScrollGridView;
 
 /**
  * Created by alex.lee on 2015-07-25.
  */
 public class SongListFragment extends Fragment {
 	private Context context;
+	private BitmapUtils mBitmapUtils;
+
+	private ScrollGridView mScrollGridView;
 
 	@Override
 	public void onAttach(Activity activity) {
@@ -32,5 +39,12 @@ public class SongListFragment extends Fragment {
 	}
 
 	private void initViews(View view) {
+		initArgs();
+
+		mScrollGridView = (ScrollGridView) view.findViewById(R.id.sgv_song_list);
+	}
+
+	private void initArgs() {
+		mBitmapUtils = BitmapHelper.getBitmapUtils(context);
 	}
 }
