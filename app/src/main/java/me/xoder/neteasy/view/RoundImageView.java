@@ -91,6 +91,12 @@ public class RoundImageView extends ImageView {
 		}
 	}
 
+	@Override
+	public void setImageBitmap(Bitmap bm) {
+
+		super.setImageBitmap(bm);
+	}
+
 	/**
 	 * 初始化BitmapShader
 	 */
@@ -130,6 +136,7 @@ public class RoundImageView extends ImageView {
 		if (getDrawable() == null) {
 			return;
 		}
+
 		setUpShader();
 
 		if (type == TYPE_ROUND) {

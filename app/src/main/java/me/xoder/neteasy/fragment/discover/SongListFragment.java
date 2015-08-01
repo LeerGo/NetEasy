@@ -16,6 +16,7 @@ import android.widget.ScrollView;
 import com.lidroid.xutils.BitmapUtils;
 
 import me.xoder.neteasy.R;
+import me.xoder.neteasy.adapter.SongListAdapter;
 import me.xoder.neteasy.utils.BitmapHelper;
 import me.xoder.neteasy.view.ScrollGridView;
 

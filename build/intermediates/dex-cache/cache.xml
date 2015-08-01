@@ -5,57 +5,8 @@
         jar="D:\Project\Imitation\NetEasy\app\libs\xUtils-2.6.14.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
+        sha1="d3559cf00bb647744f928ec3148cf36b9f9d5ebc">
         <dex dex="D:\Project\Imitation\NetEasy\app\build\intermediates\pre-dexed\debug\xUtils-2.6.14-f936202720e40547eadcd508872e32f84e9c25c9.jar" />
-    </item>
-    <item
-        jar="D:\Project\Imitation\NetEasy\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
-        <dex dex="D:\Project\Imitation\NetEasy\app\build\intermediates\pre-dexed\debug\classes-17b809892e4e14059b68a8b9c65490258e483c2d.jar" />
-    </item>
-    <item
-        jar="D:\Project\Imitation\NetEasy\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="D:\Project\Imitation\NetEasy\app\build\intermediates\pre-dexed\debug\classes-2c79e121c2f55719a3a6860c128a72b941c35982.jar" />
-    </item>
-    <item
-        jar="D:\Project\Imitation\NetEasy\app\build\intermediates\exploded-aar\com.android.support\support-v13\22.2.1\jars\libs\internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6fc4c7067459e8d69e1bbcb3a8973cdd84d5d87b">
-        <dex dex="D:\Project\Imitation\NetEasy\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-252d300b67b3d69fd7f131288335d8e9a183d70a.jar" />
-    </item>
-    <item
-        jar="D:\Project\Imitation\NetEasy\app\build\intermediates\exploded-aar\com.android.support\support-v13\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c4caf832116bca1f2e140bf1fb600e2edd190837">
-        <dex dex="D:\Project\Imitation\NetEasy\app\build\intermediates\pre-dexed\debug\classes-989721524b0808d703d29929019b430dfbacd9f7.jar" />
-    </item>
-    <item
-        jar="D:\Project\Imitation\NetEasy\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="D:\Project\Imitation\NetEasy\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-3194d8db51d048464423b535a6769d573c477058.jar" />
-    </item>
-    <item
-        jar="D:\Study\Environment\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="D:\Project\Imitation\NetEasy\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-b674aca55f2fc21b4cc12b922e44a5e00589073f.jar" />
-    </item>
-    <item
-        jar="D:\Project\Imitation\NetEasy\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="D:\Project\Imitation\NetEasy\app\build\intermediates\pre-dexed\debug\classes-21658204cebdc0d8ccf7570a6bb7d5856798f343.jar" />
     </item>
 
 </items>
