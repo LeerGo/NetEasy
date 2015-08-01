@@ -7,6 +7,7 @@ import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.PixelFormat;
 import android.graphics.RectF;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
@@ -14,9 +15,11 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.widget.ImageView;
+
+import com.lidroid.xutils.bitmap.core.AsyncDrawable;
+import com.lidroid.xutils.util.LogUtils;
 
 import me.xoder.neteasy.R;
 
@@ -57,6 +60,10 @@ public class RoundImageView extends ImageView {
 	 */
 	private int mWidth;
 	private RectF mRoundRect;
+
+	private static final String STATE_INSTANCE = "state_instance";
+	private static final String STATE_TYPE = "state_type";
+	private static final String STATE_BORDER_RADIUS = "state_border_radius";
 
 	public RoundImageView(Context context, AttributeSet attrs) {
 
@@ -102,8 +109,17 @@ public class RoundImageView extends ImageView {
 	 */
 	private void setUpShader() {
 		Drawable drawable = getDrawable();
+
 		if (drawable == null) {
 			return;
+		}
+
+		if (drawable instanceof AsyncDrawable) {
+			if (drawable.getCurrent() != null) {
+				LogUtils.v("Async: b'w = " + (drawable).getIntrinsicWidth() + " , " + "b'h = " + drawable.getIntrinsicHeight());
+			} else {
+				LogUtils.v("Async: drawable is NULL");
+			}
 		}
 
 		Bitmap bmp = drawableToBitamp(drawable);
@@ -116,7 +132,7 @@ public class RoundImageView extends ImageView {
 			scale = mWidth * 1.0f / bSize;
 
 		} else if (type == TYPE_ROUND) {
-			Log.e("TAG", "b'w = " + bmp.getWidth() + " , " + "b'h = " + bmp.getHeight());
+			LogUtils.v("b'w = " + bmp.getWidth() + " , " + "b'h = " + bmp.getHeight());
 			if (!(bmp.getWidth() == getWidth() && bmp.getHeight() == getHeight())) {
 				// 如果图片的宽或者高与view的宽高不匹配，计算出需要缩放的比例；缩放后的图片的宽高，一定要大于我们view的宽高；所以我们这里取大值；
 				scale = Math.max(getWidth() * 1.0f / bmp.getWidth(), getHeight() * 1.0f / bmp.getHeight());
@@ -160,22 +176,33 @@ public class RoundImageView extends ImageView {
 	 * drawable转bitmap
 	 */
 	private Bitmap drawableToBitamp(Drawable drawable) {
+		Bitmap bitmap;
+		Canvas canvas;
+
 		if (drawable instanceof BitmapDrawable) {
-			BitmapDrawable bd = (BitmapDrawable) drawable;
-			return bd.getBitmap();
+			return ((BitmapDrawable) drawable).getBitmap();
+		} else if (drawable instanceof AsyncDrawable) {
+//			int w = drawable.getIntrinsicWidth();
+//			int h = drawable.getIntrinsicHeight();
+//
+//			LogUtils.v("Async: b'w = " + w + " , " + "b'h = " + h);
+			// FIXME: 2015-08-01 由于xUtils 异步加载缘故 所以无法拿到宽高  这里通过指定宽高绕过这一bug 需要进一步检测
+			bitmap = Bitmap.createBitmap(150, 150, drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888 : Bitmap.Config.RGB_565);
+//			canvas = new Canvas(bitmap);
+//			canvas.setBitmap(bitmap);
+//			drawable.setBounds(0, 0, w, h);
+//			drawable.draw(canvas);
+		} else {
+			int w = drawable.getIntrinsicWidth();
+			int h = drawable.getIntrinsicHeight();
+			bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+//			canvas = new Canvas(bitmap);
+//			drawable.setBounds(0, 0, w, h);
+//			drawable.draw(canvas);
 		}
-		int w = drawable.getIntrinsicWidth();
-		int h = drawable.getIntrinsicHeight();
-		Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
-		Canvas canvas = new Canvas(bitmap);
-		drawable.setBounds(0, 0, w, h);
-		drawable.draw(canvas);
+
 		return bitmap;
 	}
-
-	private static final String STATE_INSTANCE = "state_instance";
-	private static final String STATE_TYPE = "state_type";
-	private static final String STATE_BORDER_RADIUS = "state_border_radius";
 
 	@Override
 	protected Parcelable onSaveInstanceState() {
