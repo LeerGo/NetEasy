@@ -56,7 +56,6 @@
 			android:id="@+id/sgv_song_list"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:layout_marginBottom="50dp"
 			android:layout_marginLeft="10dp"
 			android:layout_marginRight="10dp"
 			android:horizontalSpacing="10dp"
@@ -66,7 +65,8 @@
 		<RelativeLayout
 			android:id="@+id/rl_loading"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
+			android:layout_height="45dp"
+			android:layout_marginBottom="50dp"
 			android:padding="10dp"
 			android:visibility="gone">
 

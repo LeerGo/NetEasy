@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.lidroid.xutils.BitmapUtils;
 
+import java.util.List;
 import java.util.Random;
 
 import me.xoder.neteasy.R;
@@ -22,20 +23,25 @@ import me.xoder.neteasy.view.RoundImageView;
 public class SongListAdapter extends BaseAdapter {
 	private Random random;
 	private Context context;
-	private int[] imgIds = new int[]{
+	private Integer[] imgIds = new Integer[]{
 			R.drawable.sl1, R.drawable.sl2, R.drawable.sl3, R.drawable.sl4, R.drawable.sl5
 	};
+	private List<Integer> ids;
 	private BitmapUtils bitmapUtils;
+
+	int count;
 
 	public SongListAdapter(Context context) {
 		this.context = context;
 		random = new Random();
 		bitmapUtils = BitmapHelper.getBitmapUtils(context);
+//		ids = new ArrayList<>(Arrays.asList(imgIds));
+		count = 10;
 	}
 
 	@Override
 	public int getCount() {
-		return 10;
+		return count;
 	}
 
 	@Override
@@ -69,6 +75,15 @@ public class SongListAdapter extends BaseAdapter {
 		holder.tvCount.setText(NumberUtil.getCount(random.nextInt(200000)));
 
 		return convertView;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
+	public void refresh() {
+		count += 10;
+		notifyDataSetChanged();
 	}
 
 	static class ViewHolder {

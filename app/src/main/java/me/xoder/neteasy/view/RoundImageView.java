@@ -19,7 +19,6 @@ import android.util.TypedValue;
 import android.widget.ImageView;
 
 import com.lidroid.xutils.bitmap.core.AsyncDrawable;
-import com.lidroid.xutils.util.LogUtils;
 
 import me.xoder.neteasy.R;
 
@@ -114,13 +113,13 @@ public class RoundImageView extends ImageView {
 			return;
 		}
 
-		if (drawable instanceof AsyncDrawable) {
-			if (drawable.getCurrent() != null) {
-				LogUtils.v("Async: b'w = " + (drawable).getIntrinsicWidth() + " , " + "b'h = " + drawable.getIntrinsicHeight());
-			} else {
-				LogUtils.v("Async: drawable is NULL");
-			}
-		}
+//		if (drawable instanceof AsyncDrawable) {
+//			if (drawable.getCurrent() != null) {
+//				LogUtils.v("Async: b'w = " + (drawable).getIntrinsicWidth() + " , " + "b'h = " + drawable.getIntrinsicHeight());
+//			} else {
+//				LogUtils.v("Async: drawable is NULL");
+//			}
+//		}
 
 		Bitmap bmp = drawableToBitamp(drawable);
 		// 将bmp作为着色器，就是在指定区域内绘制bmp
@@ -132,7 +131,7 @@ public class RoundImageView extends ImageView {
 			scale = mWidth * 1.0f / bSize;
 
 		} else if (type == TYPE_ROUND) {
-			LogUtils.v("b'w = " + bmp.getWidth() + " , " + "b'h = " + bmp.getHeight());
+//			LogUtils.v("b'w = " + bmp.getWidth() + " , " + "b'h = " + bmp.getHeight());
 			if (!(bmp.getWidth() == getWidth() && bmp.getHeight() == getHeight())) {
 				// 如果图片的宽或者高与view的宽高不匹配，计算出需要缩放的比例；缩放后的图片的宽高，一定要大于我们view的宽高；所以我们这里取大值；
 				scale = Math.max(getWidth() * 1.0f / bmp.getWidth(), getHeight() * 1.0f / bmp.getHeight());
