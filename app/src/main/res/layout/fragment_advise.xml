@@ -17,8 +17,7 @@
 			<android.support.v4.view.ViewPager
 				android:id="@+id/banner_viewpager"
 				android:layout_width="match_parent"
-				android:layout_height="150dp"
-				android:background="@color/light_gray"/>
+				android:layout_height="150dp"/>
 
 			<LinearLayout
 				android:id="@+id/banner_viewpager_points"
