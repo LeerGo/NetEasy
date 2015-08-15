@@ -12,12 +12,9 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import me.xoder.neteasy.R;
-import me.xoder.neteasy.adapter.AnchorGridAdapter;
-import me.xoder.neteasy.adapter.AnchorPagerAdapter;
 
 /**
  * Created by alex.lee on 2015-07-25.
@@ -40,53 +37,83 @@ public class AnchorStationFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_anchor_station, container, false);
-		initViews(view);
+//		initViews(view);
 		return view;
 	}
 
-	private void initViews(View view) {
-		initArgs();
-
-		mViewPager = (ViewPager) view.findViewById(R.id.banner_viewpager);
-		mPoints = (LinearLayout) view.findViewById(R.id.banner_viewpager_points);
-
-		mViewPager.setAdapter(new AnchorPagerAdapter(views));
-		mViewPager.setCurrentItem(0);
-		mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-			private int lastPosition = 0;
-			
-			@Override
-			public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-				
-			}
-			
-			@Override
-			public void onPageSelected(int position) {
-				// 控制底部导航点的显示
-				mPoints.getChildAt(position).setEnabled(true);
-				mPoints.getChildAt(lastPosition).setEnabled(false);
-				lastPosition = position;
-			}
-			
-			@Override
-			public void onPageScrollStateChanged(int state) {
-				
-			}
-		});
-	}
-	
-	private void initArgs() {
-		stationsName = new ArrayList<>(20);
-		for (int i = 0; i < stationsName.size(); i++) {
-			stationsName.add(String.format("%02d%s", i, " 测试"));
-		}
-
-		int len = stationsName.size();
-		views = new ArrayList<>(len / 8 == 0 ? len / 8 : len / 8 + 1);
-		for (int i = 0; i < views.size(); i++) {
-			GridView view = (GridView) View.inflate(context, R.layout.demo_grid, null);
-			view.setAdapter(new AnchorGridAdapter(context, stationsName.subList(i * 8, i * 8 + 7)));
-			views.add(view);
-		}
-	}
+//	private void initViews(View view) {
+//		mViewPager = (ViewPager) view.findViewById(R.id.anchor_viewpager);
+//		mPoints = (LinearLayout) view.findViewById(R.id.anchor_viewpager_points);
+//
+//		initArgs();
+//
+//		mViewPager.setAdapter(new AnchorPagerAdapter(views));
+//		mViewPager.setCurrentItem(0);
+//		mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//			private int lastPosition = 0;
+//
+//			@Override
+//			public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//			}
+//
+//			@Override
+//			public void onPageSelected(int position) {
+//				// 控制底部导航点的显示
+//				mPoints.getChildAt(position).setEnabled(true);
+//				mPoints.getChildAt(lastPosition).setEnabled(false);
+//				lastPosition = position;
+//			}
+//
+//			@Override
+//			public void onPageScrollStateChanged(int state) {
+//
+//			}
+//		});
+//	}
+//
+//	private void initArgs() {
+//		int dataLen = 20;
+//		stationsName = new ArrayList<>(dataLen);
+//		for (int i = 0; i < dataLen; i++) {
+//			stationsName.add(String.format("%02d%s", i, " 测试"));
+//		}
+//
+//		int len = stationsName.size();
+//		LogUtils.v(String.valueOf(len));
+//		int viewLength = len / 8 == 0 ? len / 8 : len / 8 + 1;
+//		LogUtils.v(String.valueOf(viewLength));
+//		views = new ArrayList<>(viewLength);
+//
+//		for (int i = 0; i < viewLength; i++) {
+//			int start = i * 8;
+//			int end = i == viewLength - 1 ? dataLen : (i * 8 + 8);
+//
+//			GridView view = (GridView) View.inflate(context, R.layout.demo_grid, null);
+//			view.setAdapter(new AnchorGridAdapter(context, stationsName.subList(start, end)));
+//			view.setOnTouchListener(new View.OnTouchListener() {
+//				@Override
+//				public boolean onTouch(View v, MotionEvent event) {
+//					return false;
+//				}
+//			});
+//			views.add(view);
+//
+//			ImageView point = new ImageView(context);
+//			point.setBackgroundResource(R.drawable.viewpager_point);
+//			LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+//			params.rightMargin = DensityUtils.dp2px(context, 10f);
+//			params.bottomMargin = DensityUtils.dp2px(context, 10f);
+//			point.setLayoutParams(params);
+//
+//			if (i == 0) {
+//				point.setEnabled(true);
+//			} else {
+//				point.setEnabled(false);
+//			}
+//
+//			mPoints.addView(point);
+//
+//		}
+//	}
 }

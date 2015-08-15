@@ -69,10 +69,10 @@
 			android:layout_marginLeft="0dp"
 			android:layout_marginRight="0dp"/>
 
-		<FrameLayout
+		<RelativeLayout
 			android:id="@+id/frame_container"
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"
+			android:layout_height="wrap_content"
 			android:background="#f4f4f4"/>
 	</LinearLayout>
 </FrameLayout>

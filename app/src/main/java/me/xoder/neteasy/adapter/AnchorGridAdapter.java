@@ -56,6 +56,6 @@ public class AnchorGridAdapter extends BaseAdapter {
 	}
 
 	static class ViewHolder {
-		private TextView tvName;
+		TextView tvName;
 	}
 }

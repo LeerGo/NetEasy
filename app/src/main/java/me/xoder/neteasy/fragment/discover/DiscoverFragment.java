@@ -63,6 +63,7 @@ public class DiscoverFragment extends Fragment implements View.OnClickListener {
 		if (!fgAdvise.isAdded()) {
 			getChildFragmentManager().beginTransaction().add(R.id.frame_container, fgAdvise, AdviseFragment.class.getSimpleName()).commit();
 		}
+
 		fgTo = fgAdvise;
 		ctvAdvise.setChecked(true);
 		lastViewId = R.id.ctv_advise;
@@ -100,7 +101,7 @@ public class DiscoverFragment extends Fragment implements View.OnClickListener {
 				if (fgRanking == null) {
 					fgRanking = new RankingListFragment();
 				}
-				switchFragment(fgTo, fgSong, true);
+				switchFragment(fgTo, fgRanking, true);
 				break;
 		}
 

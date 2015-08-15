@@ -55,7 +55,7 @@ public class AdviseGridAdapter extends BaseAdapter {
 
 		if (convertView == null) {
 			holder = new ViewHolder();
-			convertView = View.inflate(context, R.layout.item_grid, null);
+			convertView = View.inflate(context, R.layout.item_grid_advise, null);
 
 			holder.rivCover = (RoundImageView) convertView.findViewById(R.id.riv_cover);
 			holder.tvCount = (TextView) convertView.findViewById(R.id.tv_count);
